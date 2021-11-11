@@ -37,6 +37,7 @@ dependencies:
   google_fonts: ^2.1.0
   http: ^0.13.4
   get: ^4.3.8
+  sqflite:
 
 
 dev_dependencies:
@@ -63,7 +64,12 @@ flutter:
 
 
   assets:
+    - Assets/night2.jpg
     - Assets/night.jpg
+    - Assets/cities.json
+    - Assets/worldcities.json
+
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

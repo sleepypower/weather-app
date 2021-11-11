@@ -19,7 +19,7 @@ class OpenWeatherWapClient {
       // If the server did return a 200 OK response,
       // then parse the JSON.
       var weatherInfo = jsonDecode(response.body);
-      print(weatherInfo);
+      print(weatherInfo['main']);
       return WeatherModel(
         description: weatherInfo['weather'][0]['description'],
         feelsLike: weatherInfo['main']['feels_like'],
@@ -30,6 +30,7 @@ class OpenWeatherWapClient {
         humidity: weatherInfo['main']['humidity'],
         name: weatherInfo['name'],
         time: weatherInfo['dt'],
+        windSpeed: weatherInfo['wind']['speed']
       );
     } else {
       // If the server did not return a 200 OK response,

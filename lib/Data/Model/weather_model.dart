@@ -4,14 +4,15 @@ import 'package:flutter/material.dart';
 
 class WeatherModel {
   String description;
-  double temp;
-  double feelsLike;
-  double tempMin;
-  double tempMax;
-  int pressure;
-  int humidity;
+  num temp;
+  num feelsLike;
+  num tempMin;
+  num tempMax;
+  num pressure;
+  num humidity;
   String name;
-  int time;
+  num time;
+  num windSpeed;
 
   WeatherModel({
     required this.description,
@@ -23,6 +24,7 @@ class WeatherModel {
     required this.name,
     required this.time,
     required this.feelsLike,
+    required this.windSpeed
 
   });
 
